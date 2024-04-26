@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; 
+    background-color: #e2e2e2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.personajes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.personaje-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 40px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 10px 10px 26px 0px rgba(96, 95, 94, 1);
+    background-color: #646881;
+    
+    
+}
+
+.personaje-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    background-color: #646881;
+}
+
+.personaje-card h2 {
+    color: #D6D6D6;
+    font-size: 18px;
+    margin-bottom: 5px;
+    background-color: #646881;
+}
+
+.personaje-card p {
+    align-items: flex-start;
+    font-size: 14px;
+    color: #D6D6D6;
+    margin-bottom: 15px;
+    align-content: center;
+    background-color: #646881;
+
+}
+
+.personaje-card .ver-detalle-btn {
+    background-color: #f28f3b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.personaje-card .ver-detalle-btn:hover {
+    background-color: #9E2A2B;
+}
+h1{
+    margin: 40px;
+    padding: 10px;
+    text-align: center;
+    font-size: 40px;
+    color: #f28f3b;   
+}
