@@ -1,31 +1,42 @@
-async function cargarDetallePersonaje() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const id = urlParams.get('id');
+import { obtenerDetallePersonaje } from "./utils.js";
 
-    try {
-        const personaje = await obtenerPersonajePorId(id);
+async function mostrarDetallePersonaje() {
+    
+  const params = new URLSearchParams(window.location.search);
+     const id = params.get('id');
 
-        const detallePersonajeContainer = document.getElementById('detalle-personaje');
+        const detallePersonaje = await obtenerDetallePersonaje(id);
 
-        const imagenElement = document.createElement('img');
-        imagenElement.src = personaje.fullPortrait;
-        imagenElement.alt = personaje.displayName;
+        const contenedor = document.querySelector('.detalle-personaje-container');
+        
 
-        const nombreElement = document.createElement('h2');
-        nombreElement.textContent = personaje.displayName;
+        
+        const nombre = document.createElement('h2');
+        nombre.textContent = detallePersonaje.displayName;
+        nombre.classList.add('nombre-personaje');
+        
 
-        const descripcionElement = document.createElement('p');
-        descripcionElement.textContent = personaje.description;
+        const descripcion = document.createElement('p');
+        descripcion.textContent = detallePersonaje.description;
+        descripcion.classList.add('descripcion-personaje');
 
-        const rolElement = document.createElement('p');
-        rolElement.textContent = personaje.role.description;
 
-        detallePersonajeContainer.appendChild(imagenElement);
-        detallePersonajeContainer.appendChild(nombreElement);
-        detallePersonajeContainer.appendChild(descripcionElement);
-        detallePersonajeContainer.appendChild(rolElement);
-    } catch (error) {
-        console.error('Error:', error);
-    }
+        const imagen = document.createElement('img');
+        imagen.src = detallePersonaje.fullPortrait;
+        imagen.alt = detallePersonaje.displayName;
+        imagen.classList.add('imagen-personaje');
+
+        const botonVolver = document.createElement('button');
+        botonVolver.textContent = 'Volver';
+        botonVolver.addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+
+        contenedor.appendChild(nombre);
+        contenedor.appendChild(descripcion);
+        contenedor.appendChild(imagen);
+        contenedor.appendChild(botonVolver);
+    
 }
-console.log
+
+document.addEventListener('DOMContentLoaded', mostrarDetallePersonaje);

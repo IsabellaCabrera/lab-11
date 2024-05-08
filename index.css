@@ -6,6 +6,14 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+h1 {
+    margin: 40px;
+    padding: 10px;
+    text-align: center;
+    font-size: 40px;
+    color: #f28f3b;   
+}
+
 .personajes-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -19,10 +27,8 @@
     padding: 10px;
     text-align: center;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-    box-shadow: 10px 10px 26px 0px rgba(96, 95, 94, 1);
+    box-shadow: 10px 10px 26px 0px rgba(157, 42, 44, 1);;
     background-color: #646881;
-    
-    
 }
 
 .personaje-card img {
@@ -47,26 +53,51 @@
     margin-bottom: 15px;
     align-content: center;
     background-color: #646881;
-
 }
 
 .personaje-card .ver-detalle-btn {
     background-color: #f28f3b;
+    font-weight: 500;
     color: #fff;
     border: none;
     border-radius: 5px;
     padding: 8px 16px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .personaje-card .ver-detalle-btn:hover {
     background-color: #9E2A2B;
 }
-h1{
-    margin: 40px;
-    padding: 10px;
-    text-align: center;
-    font-size: 40px;
-    color: #f28f3b;   
+
+#busqueda {
+    margin: 20px;
+    padding: 8px;
+    width: 300px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px #f28f3b;
+    cursor: pointer;
+}
+
+#busqueda:hover {
+    color: #fff;
+    background-color: #f2903bb3;
+}
+
+.eliminar-btn {
+    background-color: #fff;
+    color: #9E2A2B;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.eliminar-btn:hover {
+    color: #fff;
+    background-color: #D63436;
 }

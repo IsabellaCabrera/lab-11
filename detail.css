@@ -1,44 +1,62 @@
-/* Reset de estilos */
 * {
-    margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    margin: 0;
+    box-sizing: border-box; 
+    background-color: #e2e2e2;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Estilos para el contenedor del detalle del personaje */
-.detalle-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+.detalle-personaje-container {
+    max-width: 600px;
+    margin: 50px auto 0; 
+    background-color: #646881;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 10px 10px 26px 0px rgba(157, 42, 44, 1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
 }
 
-/* Estilos para la imagen del personaje */
-.detalle-container img {
+.nombre-personaje {
+    color: #D6D6D6;
+    font-size: 2rem;
+    background-color: #646881;
+    padding-top: 1rem;
+    border-radius: 8px;
+}
+
+.descripcion-personaje {
+    color: #D6D6D6;
+    margin: 10px ;
+    background-color: #646881;
+}
+
+.imagen-personaje {
+    background-color: #646881;
     max-width: 100%;
-    height: auto;
+    height: 500px;
     display: block;
+    margin-top: 10px;
+    border-radius: 4px;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 10px 10px;
     margin-bottom: 20px;
-}
-
-/* Estilos para los elementos de texto */
-.detalle-container h2,
-.detalle-container p {
-    margin-bottom: 10px;
-}
-
-/* Estilos para el nombre del personaje */
-.detalle-container h2 {
-    font-size: 24px;
-    color: #333;
-}
-
-/* Estilos para la descripción del personaje */
-.detalle-container p {
+    background-color: #f28f3b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
     font-size: 16px;
-    color: #666;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
 
-/* Estilos para el rol del personaje */
-.detalle-container .rol {
-    font-style: italic;
+button:hover {
+    background-color: #9E2A2B;
 }
